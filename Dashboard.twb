@@ -624,137 +624,6 @@
       </table>
       <simple-id uuid='{8894D84A-8B08-447F-A81C-B5CD686762CA}' />
     </worksheet>
-    <worksheet name='Customer Education'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='clean' name='federated.1kyx1wj0xg73sl16by1sq140yfzt' />
-          </datasources>
-          <datasource-dependencies datasource='federated.1kyx1wj0xg73sl16by1sq140yfzt'>
-            <column datatype='integer' name='[Age]' role='measure' type='quantitative' />
-            <column datatype='string' name='[Education]' role='dimension' type='nominal' />
-            <column caption='Family Size discrete' datatype='integer' name='[Family Size (copy)_1768507324500160515]' role='measure' type='ordinal'>
-              <calculation class='tableau' formula='[FamilySize]' />
-            </column>
-            <_.fcp.ObjectModelTableType.false...column caption='clean.csv' datatype='integer' name='[__tableau_internal_object_id__].[clean.csv_53EA8C809F6C41DBAE0A2DA0CADEC1AD]' role='measure' type='quantitative' />
-            <column caption='Family Size' datatype='integer' name='[FamilySize]' role='measure' type='quantitative' />
-            <_.fcp.ObjectModelTableType.true...column caption='clean.csv' datatype='table' name='[__tableau_internal_object_id__].[clean.csv_53EA8C809F6C41DBAE0A2DA0CADEC1AD]' role='measure' type='quantitative' />
-            <column-instance column='[__tableau_internal_object_id__].[clean.csv_53EA8C809F6C41DBAE0A2DA0CADEC1AD]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:clean.csv_53EA8C809F6C41DBAE0A2DA0CADEC1AD:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Age]' derivation='None' name='[none:Age:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Education]' derivation='None' name='[none:Education:nk]' pivot='key' type='nominal' />
-            <column-instance column='[Family Size (copy)_1768507324500160515]' derivation='None' name='[none:Family Size (copy)_1768507324500160515:ok]' pivot='key' type='ordinal' />
-          </datasource-dependencies>
-          <filter class='quantitative' column='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Age:qk]' included-values='in-range'>
-            <min>27</min>
-            <max>83</max>
-          </filter>
-          <filter class='categorical' column='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]' filter-group='5'>
-            <groupfilter function='level-members' level='[none:Education:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
-          </filter>
-          <filter class='categorical' column='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Family Size (copy)_1768507324500160515:ok]' filter-group='4'>
-            <groupfilter function='level-members' level='[none:Family Size (copy)_1768507324500160515:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
-          </filter>
-          <slices>
-            <column>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Age:qk]</column>
-            <column>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Family Size (copy)_1768507324500160515:ok]</column>
-            <column>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='cell'>
-            <format attr='vertical-align' field='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]' value='center' />
-            <format attr='text-align' value='center' />
-            <format attr='text-align' field='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]' value='center' />
-            <format attr='font-weight' value='bold' />
-            <format attr='font-size' value='12' />
-            <format attr='color' value='#000000' />
-            <format attr='color' data-class='subtotal' value='#000000' />
-            <format attr='color' data-class='subtotal' scope='rows' value='#000000' />
-            <format attr='color' data-class='total' scope='rows' value='#000000' />
-            <format attr='border-style' scope='cols' value='solid' />
-            <format attr='border-width' scope='cols' value='5' />
-            <format attr='border-color' scope='cols' value='#f5f5f5' />
-          </style-rule>
-          <style-rule element='header'>
-            <format attr='height' field='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]' value='23' />
-            <format attr='vertical-align' data-class='total' field='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]' value='center' />
-            <format attr='band-color' scope='cols' value='#00000000' />
-            <format attr='text-align' data-class='subtotal' field='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]' value='center' />
-            <format attr='text-align' data-class='total' field='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]' value='center' />
-            <format attr='color' data-class='subtotal' value='#000000' />
-            <format attr='color' data-class='total' value='#000000' />
-            <format attr='color' data-class='subtotal' scope='rows' value='#000000' />
-            <format attr='color' data-class='total' scope='rows' value='#000000' />
-            <format attr='background-color' field='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]' value='#f5f5f5' />
-            <format attr='band-color' scope='rows' value='#00000000' />
-            <format attr='background-color' value='#f5eddc' />
-            <format attr='background-color' scope='cols' value='#00000000' />
-            <format attr='border-width' data-class='subtotal' value='0' />
-            <format attr='border-style' data-class='subtotal' value='none' />
-          </style-rule>
-          <style-rule element='field-labels'>
-            <format attr='font-size' value='15' />
-          </style-rule>
-          <style-rule element='label'>
-            <format attr='text-align' field='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]' value='center' />
-            <format attr='text-align' value='center' />
-            <format attr='color' value='#000000' />
-            <format attr='color' scope='rows' value='#000000' />
-          </style-rule>
-          <style-rule element='pane'>
-            <format attr='background-color' value='#fefaf1' />
-            <format attr='band-color' scope='rows' value='#00000000' />
-            <format attr='background-color' data-class='subtotal' scope='cols' value='#00000000' />
-            <format attr='band-color' scope='cols' value='#00000000' />
-            <format attr='border-width' scope='cols' value='0' />
-            <format attr='border-width' data-class='subtotal' value='0' />
-            <format attr='border-style' data-class='subtotal' value='none' />
-          </style-rule>
-          <style-rule element='table'>
-            <format attr='background-color' value='#00000000' />
-            <format attr='band-size' scope='rows' value='1' />
-            <format attr='band-size' scope='cols' value='1' />
-          </style-rule>
-          <style-rule element='worksheet'>
-            <format attr='display-field-labels' scope='cols' value='false' />
-            <format attr='font-weight' value='normal' />
-            <format attr='color' value='#000000' />
-          </style-rule>
-          <style-rule element='table-div'>
-            <format attr='stroke-size' scope='rows' value='0' />
-            <format attr='line-visibility' scope='rows' value='off' />
-          </style-rule>
-          <style-rule element='quick-filter'>
-            <format attr='title' field='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Family Size (copy)_1768507324500160515:ok]' value='Family Size Selector for Education'>
-              <formatted-text>
-                <run>Family Size Selector for Education</run>
-              </formatted-text>
-            </format>
-          </style-rule>
-        </style>
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-            <encodings>
-              <text column='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[__tableau_internal_object_id__].[cnt:clean.csv_53EA8C809F6C41DBAE0A2DA0CADEC1AD:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-show' value='true' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows />
-        <cols>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]</cols>
-      </table>
-      <simple-id uuid='{2FA07735-6ECF-4B7F-8411-377BC0EC41EC}' />
-    </worksheet>
     <worksheet name='Income Distribution'>
       <table>
         <view>
@@ -1255,8 +1124,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1800' minheight='1800' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='23' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='22' param='vert' type-v2='layout-flow' w='99000' x='500' y='1000'>
+            <zone h='100000' id='21' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='20' param='vert' type-v2='layout-flow' w='99000' x='500' y='1000'>
                 <zone h='8125' id='4' type-v2='text' w='43667' x='0' y='0'>
                   <formatted-text>
                     <run fontsize='35'>Customer Analysis</run>
@@ -1480,48 +1349,6 @@
         </highlight>
       </viewpoint>
       <simple-id uuid='{73DB2163-608E-40BA-B5BE-0DF9806AD100}' />
-    </window>
-    <window class='worksheet' name='Customer Education'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card param='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Family Size (copy)_1768507324500160515:ok]' type='filter' />
-            <card param='[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Age:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <zoom type='entire-view' />
-        <highlight>
-          <color-one-way>
-            <field>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[attr:Marital_Status:nk]</field>
-            <field>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Age:qk]</field>
-            <field>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Education:nk]</field>
-            <field>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Family Size (bin):qk]</field>
-            <field>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Family Size (copy)_1768507324500160515:ok]</field>
-            <field>[federated.1kyx1wj0xg73sl16by1sq140yfzt].[none:Marital_Status:nk]</field>
-          </color-one-way>
-        </highlight>
-      </viewpoint>
-      <simple-id uuid='{7EFE6C45-6C97-4871-8FA6-2D19D0A113FD}' />
     </window>
     <window class='worksheet' name='Total Customer'>
       <cards>
